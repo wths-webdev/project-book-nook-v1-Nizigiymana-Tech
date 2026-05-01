@@ -91,7 +91,7 @@ while True:
         Quit (q)
         """)
     
-    action = input("What would you like to do? ")
+    action = input("What would you like to do? ").strip().lower()
 
     if action == "q":
         break
