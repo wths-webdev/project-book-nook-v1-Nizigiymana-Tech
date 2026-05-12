@@ -30,6 +30,7 @@ def remove():
     if len(Books) < 1:
         print("No books to remove.")
         Readyup()
+        return
     
     BookName = input("What book do you wanna remove? ")
 
@@ -40,6 +41,7 @@ def remove():
         Again = input("Do you wanna try again? (Y/N) ")
         if Again == "Y":
             remove()
+            return
         else:
             return
 
@@ -51,7 +53,6 @@ def count():
     Readyup()
 
 def show():
-    print(f"There are {len(Books)} in your inventory.")
     if len(Books) == 0:
         return
     
