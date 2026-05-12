@@ -33,7 +33,6 @@ def remove():
         return
     
     BookName = input("What book do you wanna remove? ")
-
     try: 
         Books.remove(BookName)
     except ValueError:
@@ -44,7 +43,6 @@ def remove():
             return
         else:
             return
-
     print("Removed your book!")
     Readyup()
 
@@ -55,10 +53,8 @@ def count():
 def show():
     if len(Books) == 0:
         return
-    
     for i in range(len(Books)):
         print(f"{i + 1}. {Books[i]}")
-
     Readyup()
     
 actions = {"add": add, "remove": remove, "count": count, "show": show}
@@ -83,5 +79,3 @@ while True:
     except KeyError:
         print("Not a option. Choose again!")
         Readyup()
-
-        
