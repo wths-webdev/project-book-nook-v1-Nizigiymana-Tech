@@ -1,22 +1,10 @@
-#  List of books
-# print wlecome messages
-# open menu
-# ask user for input
-# ask user for books
-# add to list
-# success message
-# if "show"
-#print out list
-import climage
 import time
 
 Books = []
-image = climage.convert("images/book-nook-logo.png", is_unicode=True, width=80)
 
-# Welcome Message
 print("Welcome to...")
 time.sleep(2)
-# print(image)
+
 print(r"""
          ______ ______
         _/      Y      \_
@@ -37,13 +25,11 @@ def add():
     Books.append(BookName)
     print("Added your book!")
     Readyup()
-    return
-
+    
 def remove():
     if len(Books) < 1:
         print("No books to remove.")
         Readyup()
-        return
     
     BookName = input("What book do you wanna remove? ")
 
@@ -54,18 +40,15 @@ def remove():
         Again = input("Do you wanna try again? (Y/N) ")
         if Again == "Y":
             remove()
-            return
         else:
             return
 
     print("Removed your book!")
     Readyup()
-    return
 
 def count():
     print(f"There are {len(Books)} in your inventory.")
     Readyup()
-    return
 
 def show():
     print(f"There are {len(Books)} in your inventory.")
@@ -76,11 +59,9 @@ def show():
         print(f"{i + 1}. {Books[i]}")
 
     Readyup()
-    return
-
+    
 actions = {"add": add, "remove": remove, "count": count, "show": show}
 
-#Open Menu
 while True:
     print("""
         Menu: 
